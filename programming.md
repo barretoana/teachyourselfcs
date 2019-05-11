@@ -62,3 +62,115 @@ This document is for note-taking and expanding on the main subject of the book. 
 
 » **Procedures**: descriptions of rules for manipulating data;  
 » **Data**: *stuff* we want to manipulate; 
+
+### 1.1.1 Expressions 
+
+» An expression is a combination of one or more constants, variables, operators and functions that the programming language interprets and computes to produce another value ([Wikipedia](https://en.wikipedia.org/wiki/Expression_(computer_science))).  
+
+» **Evaluation**: this process for mathematical expressions ^   
+
+» **Prefix Notation**    
+```
+(- 13 1)
+```  
+Combination:  (- 13 1)   
+Operator: -   
+Operands: 13 1  
+Arguments: 13, 1  
+└ Advantages: less ambiguity, allows straight foward nesting;   
+└ Pretty printing (aka indentation) can help with legibility;   
+
+» The Interpreer runs a read-eval-print loop;   
+
+### 1.1.2 Naming the Environment   
+
+» **Variables**   
+```
+(define size 2)
+``` 
+Name-Object pair: size, 2   
+└ Simplest means of abstraction   
+
+» Complex programs are constructed by building step by step computational objects of increasing complexity;    
+
+» **Environment**: memory that keeps track o the name-object pairs;    
+
+### 1.1.3 Evaluating Combinations  
+
+» **Evaluation Process**:   
+1. Evaluate the subexpressions of the combination   
+2. Apply the procedure to the arguments    
+
+└ recursive in nature    
+
+» Tree accumulation: filter values upwads;   
+
+» Special Forms: exceptions of the general evaluation rule (such as define);   
+
+### 1.1.4 Compund Procedures 
+
+» **Procedure definitions**: a compound operation can be given a name and then refered to as a unit;  
+```
+(define (square x) (* x x))
+```  
+
+### 1.1.5 The Substitution Model for Procedure Application
+
+» The interpreter evaluates the elements of the combination and applier the procedure to the arguments;   
+
+» **Substitution Model**: The process of evaluating the body of the procedure with the parameter replaced by the corresponding argument (not how typical interpreters work);   
+
+» **Normal Order Evalutaion**: fully expand the expression then reduce;   
+
+» **Applicative Order evaluation**: evaluatee the arguments and then apply;   
+└ Used by Lisp's interpreter because of efficiency and normal order is more complicated; 
+
+### 1.1.6 Conditional Expressions and Predicates
+
+» **Case Analysis**: perform different operations depending on the result of a test. 
+``` 
+(cond (p1 e1)
+      (p2 e2) 
+      ...
+      (pn en))
+          
+          
+ (if <predicate> <consequent> <alternative> 
+ ```
+
+Predicate: the value to be interpreted as true or false; 
+Expression or Consequent: if the predicate is true, returns the value of the expression; 
+Alternative: if the predicate is false, returns the alternative; 
+
+» **Logic composition operations**: 
+└ AND: true when all true; 
+└ OR: true when at least one true; 
+└ NOT: negates the value; 
+
+```
+(and <e1> ... <en>) 
+(or <e1> <e2> ... <en>)
+(not <e>) 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
