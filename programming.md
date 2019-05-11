@@ -103,7 +103,7 @@ Name-Object pair: size, 2
 
 └ recursive in nature    
 
-» Tree accumulation: filter values upwads;   
+» Tree accumulation: filter values upwards;   
 
 » Special Forms: exceptions of the general evaluation rule (such as define);   
 
@@ -135,7 +135,7 @@ Name-Object pair: size, 2
       (pn en))
           
           
- (if <predicate> <consequent> <alternative> 
+ (if <predicate> <consequent> <alternative>)
  ```
 
 Predicate: the value to be interpreted as true or false; 
@@ -143,9 +143,9 @@ Expression or Consequent: if the predicate is true, returns the value of the exp
 Alternative: if the predicate is false, returns the alternative; 
 
 » **Logic composition operations**: 
-└ AND: true when all true; 
-└ OR: true when at least one true; 
-└ NOT: negates the value; 
+└ AND: true when all true;   
+└ OR: true when at least one true;   
+└ NOT: negates the value;   
 
 ```
 (and <e1> ... <en>) 
